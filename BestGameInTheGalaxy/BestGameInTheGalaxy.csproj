@@ -79,8 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet2D.cs" />
+    <Compile Include="Assets\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Scripts\CollisionEnemy.cs" />
     <Compile Include="Assets\Scripts\FireScript2D.cs" />
-    <Compile Include="Assets\Scripts\Healthenemy.cs" />
+    <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\TransitAnimations.cs" />
     <Compile Include="Assets\Scripts\TransitAnimationsGun.cs" />

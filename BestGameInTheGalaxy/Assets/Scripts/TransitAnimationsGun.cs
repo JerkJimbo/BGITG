@@ -16,15 +16,17 @@ public class TransitAnimationsGun : MonoBehaviour {
         //делаем ссылку на Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
         //делаем ссылку на Move
-        mo = GetComponent<Move>();
+        mo = GameObject.Find("Player").GetComponent<Move>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if(mo.isGrounded && Input.GetMouseButton(0))
+		if(!mo.isGrounded && Input.GetMouseButton(0))
         {
+            Debug.Log(mo.isGrounded);
             anima.SetBool("cFire", true);
+            Debug.Log(anima.GetBool("cFire"));
         }
         else
         {

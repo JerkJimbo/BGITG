@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TransitAnimations : MonoBehaviour
 {
+    FireScript2D FS;
     //ссылочная переменная для аниматора
     Animator anim;
     //ссылочная переменная для rigidbody2D
@@ -13,7 +14,7 @@ public class TransitAnimations : MonoBehaviour
 
     void Start()
     {
-        
+        FS = GameObject.Find("GUN").GetComponent<FireScript2D>();
         //делаем ссылку на аниматор
         anim = GetComponent<Animator>();
         //делаем ссылку на Rigidbody2D
@@ -36,9 +37,10 @@ public class TransitAnimations : MonoBehaviour
             //меняем параметр isJumping на false
             anim.SetBool("isJumping", false);
             anim.SetBool("isJumping1", true);
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0) && FS.CheckShot)
             {
                 anim.SetBool("Shot", true);
+                FS.CheckShot = false;
             }
             else
             {

@@ -1,15 +1,17 @@
-﻿// NULLcode Studio © 2015
-// null-code.ru
-
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class FireScript2D : MonoBehaviour {
-
+    public GameObject TextObject;
+    Text textComponent;
+    public BulletController BC;
+    public bool CheckShot;
 	public float speed = 10; // скорость пули
 	public Rigidbody2D bullet; // префаб нашей пули
 	public Transform gunPoint; // точка рождения
-	public float fireRate = 100; // скорострельность
+	public float fireRate = 500; // скорострельность
 
 	public Transform zRotate; // объект для вращения по оси Z
 
@@ -18,9 +20,13 @@ public class FireScript2D : MonoBehaviour {
 	public float maxAngle = 40;
 
 	private float curTimeout;
+    
 	
 	void Start()
 	{
+        curTimeout = fireRate + 1;
+        textComponent = TextObject.GetComponent<Text>();
+        BC = GameObject.Find("Player").GetComponent<BulletController>();
 	}
 
 	/*void SetRotation()
@@ -36,13 +42,15 @@ public class FireScript2D : MonoBehaviour {
 	
 	void Update()
 	{
-		if(Input.GetMouseButton(0))
+        textComponent.text = BC.ammoCount.ToString();
+        if (Input.GetMouseButton(0))
 		{
 			Fire();
 		}
 		else
-		{
-			curTimeout = 100;
+		{ 
+                curTimeout += 10;
+			
 		}
 
 		//if(zRotate) SetRotation();
@@ -50,9 +58,11 @@ public class FireScript2D : MonoBehaviour {
 
 	void Fire()
 	{
-		curTimeout += Time.deltaTime;
-		if(curTimeout > fireRate)
+		curTimeout += 10;
+		if(curTimeout > fireRate && BC.ammoCount>0)
 		{
+            BC.ammoCount--;
+            CheckShot = true;
 			curTimeout = 0;
 			Rigidbody2D clone = Instantiate(bullet, gunPoint.position, Quaternion.identity) as Rigidbody2D;
 			clone.velocity = transform.TransformDirection(gunPoint.right * speed);
