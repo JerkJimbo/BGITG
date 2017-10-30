@@ -51,14 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\CreateBird.cs" />
-     <Compile Include="Assets\scripts\CreateBirdL.cs" />
-     <Compile Include="Assets\scripts\Ladder.cs" />
-     <Compile Include="Assets\scripts\LadderEditor.cs" />
-     <Compile Include="Assets\scripts\LadderManager.cs" />
-     <Compile Include="Assets\scripts\Lift.cs" />
-     <Compile Include="Assets\scripts\MoveBird.cs" />
-     <Compile Include="Assets\scripts\MoveBirdL.cs" />
+     <Compile Include="Assets\Scripts\CreateBird.cs" />
+     <Compile Include="Assets\Scripts\CreateBirdL.cs" />
+     <Compile Include="Assets\Scripts\Ladder.cs" />
+     <Compile Include="Assets\Scripts\LadderEditor.cs" />
+     <Compile Include="Assets\Scripts\LadderManager.cs" />
+     <Compile Include="Assets\Scripts\Lift.cs" />
+     <Compile Include="Assets\Scripts\MoveBird.cs" />
+     <Compile Include="Assets\Scripts\MoveBirdL.cs" />
      <Compile Include="Assets\Scripts1\Bullet2D.cs" />
      <Compile Include="Assets\Scripts1\BulletController.cs" />
      <Compile Include="Assets\Scripts1\CollisionEnemy.cs" />
