@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class Lift : MonoBehaviour {
 
-	public float SpeedMove = 3f;
-	public float VectorMove = 0;
-	public float MaxY = 0.5f;
-	public float MinY = -2.8f;
-	void Start () {
-		
+	private bool flag = true;
+	public float speed = 0.1f;
+	private Vector3 PosDown = new Vector3 (17,-2.9f, 0);
+	private Vector3 PosUp = new Vector3 (17, 2f, 0);
+
+
+	void Update () 
+	{
+		if (Input.GetKeyUp (KeyCode.E)) 
+		{
+			if (flag == true) {
+				TransformerKeyDown ();
+				flag = false;
+			} 
+			else 
+			{
+				TransformerKeyUp ();
+				flag = true;
+			}
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		Vector3 Pos = this.transform.position;
-		if (Pos.y == MaxY)
-			//VectorMove = -1;
-		if (Pos.y == MinY) //VectorMove = 1;
-		Pos.y = Pos.y + SpeedMove * VectorMove * Time.deltaTime;
-		this.transform.position = Pos;
+
+	void TransformerKeyDown()
+	{
+		this.transform.position += this.transform.up * Input.GetAxis ("Vertical") * speed * Time.deltaTime;
+	}
+
+	void TransformerKeyUp()
+	{
+		this.transform.position += this.transform.position * Input.GetAxis ("Vertical") * speed * Time.deltaTime;
 	}
 }

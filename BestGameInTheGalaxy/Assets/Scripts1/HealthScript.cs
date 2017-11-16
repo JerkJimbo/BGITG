@@ -17,6 +17,7 @@ public class HealthScript : MonoBehaviour
         }
 
     }
+
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
         Bullet2D shot = otherCollider.gameObject.GetComponent<Bullet2D>();

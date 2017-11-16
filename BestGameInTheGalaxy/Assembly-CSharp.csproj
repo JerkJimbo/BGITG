@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\buff.cs" />
      <Compile Include="Assets\Scripts\CreateBird.cs" />
      <Compile Include="Assets\Scripts\CreateBirdL.cs" />
+     <Compile Include="Assets\Scripts\HPBuff.cs" />
      <Compile Include="Assets\Scripts\Ladder.cs" />
      <Compile Include="Assets\Scripts\LadderEditor.cs" />
      <Compile Include="Assets\Scripts\LadderManager.cs" />
