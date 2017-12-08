@@ -7,6 +7,10 @@ using UnityEditor;
 
 public class LadderEditor : Editor {
 
+
+	//добавляем кнопки в инспектор
+
+
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector();

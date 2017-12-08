@@ -6,9 +6,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
     <ProjectGuid>{8482D441-14BE-9583-A742-37565C4537B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,57 +38,57 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\buff.cs" />
-     <Compile Include="Assets\Scripts\CreateBird.cs" />
-     <Compile Include="Assets\Scripts\CreateBirdL.cs" />
-     <Compile Include="Assets\Scripts\HPBuff.cs" />
-     <Compile Include="Assets\Scripts\Ladder.cs" />
-     <Compile Include="Assets\Scripts\LadderEditor.cs" />
-     <Compile Include="Assets\Scripts\LadderManager.cs" />
-     <Compile Include="Assets\Scripts\Lift.cs" />
-     <Compile Include="Assets\Scripts\MoveBird.cs" />
-     <Compile Include="Assets\Scripts\MoveBirdL.cs" />
-     <Compile Include="Assets\Scripts1\Bullet2D.cs" />
-     <Compile Include="Assets\Scripts1\BulletController.cs" />
-     <Compile Include="Assets\Scripts1\CollisionEnemy.cs" />
-     <Compile Include="Assets\Scripts1\FireScript2D.cs" />
-     <Compile Include="Assets\Scripts1\HealthScript.cs" />
-     <Compile Include="Assets\Scripts1\Move.cs" />
-     <Compile Include="Assets\Scripts1\TransitAnimations.cs" />
-     <Compile Include="Assets\Scripts1\TransitAnimationsGun.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Scripts\buff.cs" />
+    <Compile Include="Assets\Scripts\buff2.cs" />
+    <Compile Include="Assets\Scripts\CreateBird.cs" />
+    <Compile Include="Assets\Scripts\CreateBirdL.cs" />
+    <Compile Include="Assets\Scripts\HPBuff.cs" />
+    <Compile Include="Assets\Scripts\Ladder.cs" />
+    <Compile Include="Assets\Scripts\LadderEditor.cs" />
+    <Compile Include="Assets\Scripts\LadderManager.cs" />
+    <Compile Include="Assets\Scripts\MoveBird.cs" />
+    <Compile Include="Assets\Scripts\MoveBirdL.cs" />
+    <Compile Include="Assets\Scripts1\Bullet2D.cs" />
+    <Compile Include="Assets\Scripts1\BulletController.cs" />
+    <Compile Include="Assets\Scripts1\CollisionEnemy.cs" />
+    <Compile Include="Assets\Scripts1\FireScript2D.cs" />
+    <Compile Include="Assets\Scripts1\HealthScript.cs" />
+    <Compile Include="Assets\Scripts1\Move.cs" />
+    <Compile Include="Assets\Scripts1\TransitAnimations.cs" />
+    <Compile Include="Assets\Scripts1\TransitAnimationsGun.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\TestRunner\net35\unity-custom\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor\UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityAnalytics\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityHoloLens\RuntimeEditor\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -99,5 +98,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

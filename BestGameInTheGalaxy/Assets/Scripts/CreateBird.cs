@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CreateBird : MonoBehaviour {
 
+	// создание птички для полета вправо
+
 	public GameObject FBird;
 
 	void Start () {

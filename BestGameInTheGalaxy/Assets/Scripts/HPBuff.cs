@@ -5,25 +5,32 @@ using UnityEngine.UI;
 
 public class HPBuff : MonoBehaviour {
 
-	public int HPRes;
-	public HealthScript php;
+
+	// Аптечка
+
+	public int HPRes;//кол-во восстанавливаемого здоровья, изменяется в инспекторе
+	public HealthScript php; //переменная скрипта здоровья
 
 	void Start()
 	{
+		// подключаем скрипт здоровья
 		php = GameObject.Find("Player").GetComponent<HealthScript> ();
 	}
 
+	//поднятие аптечки
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.gameObject.name =="HPBuff")
 		{
-			if (php.hp <5)
+			if (php.hp <5) //ограничение здоровья
 			{
 				php.hp += HPRes;
-				Destroy(other.gameObject);
+				Destroy(other.gameObject);//уничтожение аптечки после поднтия
 			}
 		}
 	}
+
+
 
 
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class CreateBirdL : MonoBehaviour {
 
 
-	//движение птички для полета влево
+	//создание птички для полета влево
+	//как и CreateBird, но на противоположной стороне карты
 
 
 

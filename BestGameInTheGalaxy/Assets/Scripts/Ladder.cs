@@ -6,34 +6,38 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour {
 
+
+
+
+
 	[Header("Шаблон:")]
 	[SerializeField] private SpriteRenderer section;
 	private Vector3 position;
 	private float offset;
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other) //персонаж на триггере
 	{
-		if(string.Compare(other.tag, "Player") == 0)
+		if(other.tag == "Player")
 		{
 			LadderManager.SetLadderBounds(GetComponent<BoxCollider2D>().bounds);
 		}
 	}
 
-	void OnTriggerExit2D(Collider2D other)
+	void OnTriggerExit2D(Collider2D other) // не на триггере
 	{
-		if(string.Compare(other.tag, "Player") == 0)
+		if(other.tag == "Player")
 		{
 			LadderManager.ResetStatus();
 		}
 	}
 
-	SpriteRenderer GetLast()
+	SpriteRenderer GetLast() //поиск последней секции
 	{
 		Transform tr = (transform.childCount > 0) ? transform.GetChild(transform.childCount-1) : null;
 		return (tr != null) ? tr.GetComponent<SpriteRenderer>() : null;
 	}
 
-	public void AddSection()
+	public void AddSection() // добавление секции через инспектор
 	{
 		if(section == null) return;
 
@@ -59,7 +63,7 @@ public class Ladder : MonoBehaviour {
 		CalculateTriggerSize(clone, id);
 	}
 
-	void CalculateTriggerSize(SpriteRenderer ren, int id)
+	void CalculateTriggerSize(SpriteRenderer ren, int id) //изменение размера триггера
 	{
 		if(ren == null)
 		{
@@ -77,7 +81,7 @@ public class Ladder : MonoBehaviour {
 		box.offset = (id > 1) ? new Vector2(0, height / 2 - heightOffset) : Vector2.zero;
 	}
 
-	float Height()
+	float Height() //вычисляем высоту лестницы
 	{
 		float value = 0;
 		SpriteRenderer[] ren = GetComponentsInChildren<SpriteRenderer>();
@@ -90,14 +94,14 @@ public class Ladder : MonoBehaviour {
 		return value;
 	}
 
-	void ResetTriggerSize()
+	void ResetTriggerSize() //убираем триггер (при удалении всех секций)
 	{
 		BoxCollider2D box = GetComponent<BoxCollider2D>();
 		box.size = Vector2.one;
 		box.offset = Vector2.zero;
 	}
 
-	public void RemoveSection()
+	public void RemoveSection() //удаление секции сверху
 	{
 		SpriteRenderer last = GetLast();
 
@@ -113,7 +117,7 @@ public class Ladder : MonoBehaviour {
 		CalculateTriggerSize(GetLast(), transform.childCount + 1);
 	}
 
-	public void ClearAll()
+	public void ClearAll() //удаление всех секций
 	{
 		GameObject[] childs = new GameObject[transform.childCount];
 
